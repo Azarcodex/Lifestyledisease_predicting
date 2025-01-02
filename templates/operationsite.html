@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>mainpage</title>
+       <link rel="stylesheet" href="{% static 'asset/operation.css' %}">
+       <style>
+              body
+              {
+                     background-image:linear-gradient(rgba(0, 68, 255, 0.75),rgba(0, 0, 0, 0.75)),url("{% static 'images/bgop.jpg' %}");
+                     background-position: left;
+                     background-size: cover;
+              }
+       </style>
+</head>
+<body>
+      <header>
+       <button type="button" class="back-btn" title="back to home page" id="back-btn">back</button>
+      </header>
+      <form action="{% url 'prediction' %}" method="post">
+       {% csrf_token %}
+       <fieldset>
+              <legend>health assessement form</legend>
+       <div class="form-container">
+              <div class="input-bx">
+                     <div class="input-flds">
+                          <label for="Fever">do you have fever?</label>
+                          <select id="Fever" name="Fever" required>
+                            <option value="">select:</option>
+                            <option value="yes">yes</option>
+                            <option value="no">no</option>
+                          </select>
+                     </div>
+                     <div class="input-flds">
+                            <label for="Cough">any cough issues?</label>
+                            <select id="cough" name="Cough" required>
+                                   <option value="">select:</option>
+                                   <option value="yes">yes</option>
+                                   <option value="no">no</option>
+                                 </select>
+                     </div>
+              </div>
+              <div class="input-bx">
+                     <div class="input-flds">
+                          <label for="Fatigue">any fatigue?</label>
+                          <select id="fatigue" name="Fatigue" required>
+                            <option value="">select:</option>
+                            <option value="yes">yes</option>
+                            <option value="no">no</option>
+                          </select>
+                     </div>
+                     <div class="input-flds">
+                            <label for="Difficulty Breathing">difficulty in breathing?</label>
+                            <select id="breathing" name="Difficulty Breathing" required>
+                                   <option value="">select:</option>
+                                   <option value="yes">yes</option>
+                                   <option value="no">no</option>
+                                 </select>
+                     </div>
+              </div>
+              <div class="input-bx">
+                     <div class="input-flds" style="display: flex; flex-direction: column;">
+                            <label for="Age">age:</label>
+                            <input type="number" name="Age" id="age" class="age-inp">
+                     </div>
+                     <div class="input-flds">
+                            <label for="Gender">Gender</label>
+                            <select id="gender" name="Gender" required>
+                                   <option value="">select:</option>
+                                   <option value="male">male</option>
+                                   <option value="female">female</option>
+                                   <option value="other">other</option>
+                                 </select>
+                     </div>
+              </div>
+              <div class="input-bx">
+                     <div class="input-flds">
+                          <label for="Blood Pressure">blood pressure</label>
+                          <select id="bp" name="Blood Pressure" required>
+                            <option value="">select:</option>
+                            <option value="low">low</option>
+                            <option value="normal">normal</option>
+                            <option value="high">high</option>
+                          </select>
+                     </div>
+                     <div class="input-flds">
+                            <label for="Cholesterol Level">cholestrol level</label>
+                            <select id="cl" name="Cholesterol Level" required>
+                              <option value="">select:</option>
+                              <option value="low">low</option>
+                              <option value="normal">normal</option>
+                              <option value="high">high</option>
+                            </select>
+                       </div>
+              </div>
+              <button type="submit" class="btn">submit</button>
+       </div>
+</fieldset>
+      </form>
+      <script>
+       const exit=document.getElementById("back-btn");
+       exit.onclick=()=>{
+              window.location.href="{% url 'index' %}";
+       }
+      </script>
+</body>
+</html>

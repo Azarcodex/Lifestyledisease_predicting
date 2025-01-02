@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Prediction</title>
+       <style>
+              @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*
+{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family: "Poppins", sans-serif;
+       font-weight: 700;
+       font-style: normal;
+}
+              body
+              {
+                     background-image:linear-gradient(rgba(0, 68, 255, 0.75),rgba(0, 0, 0, 0.75)),url("{% static 'images/bgpredict.jpg' %}");
+                     background-position: center;
+                     background-size: cover;
+                     height: 100vh;
+                     display: flex;
+                     align-items: center;
+                     justify-content: center;
+              }
+              .predict-container
+              {
+                     width: 600px;
+                     height: auto;
+                     border: .1rem solid #fff;
+                     border-radius: 1rem;
+                     padding: 2rem 1.5rem;
+                     display: flex;
+                     align-items: center;
+                     justify-content: space-between;
+                     flex-direction: column;
+              }
+       .predict-container .predict-head
+{
+              color: #fff;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              flex-direction: column;
+              border: .1rem solid #fff;
+              border-radius: .5rem;
+              padding: .5rem;
+       }
+       .predict-container .predict-head h2
+       {
+              text-transform: uppercase;
+              font-weight: 400;
+              font-size: 1.5rem;
+       }
+       .predict-container .predict-head p
+       {
+           font-weight: 300;
+           font-size: .9rem;
+           letter-spacing: 2px;
+           margin: .5rem 0 0;
+       }
+       .predict-container .predict-data
+       {
+              background: transparent;
+              border: .1rem solid #fff;
+              color: #fff;
+              padding: .5rem 1rem;
+              margin: 2rem 0 2rem;
+              border-radius: .5rem;
+       }
+       .predict-container .predict-data h3
+       {
+              text-transform: uppercase;
+              font-size: 1rem;
+              font-weight: 400;
+              text-align: left;
+              text-decoration: underline;
+       }
+       .predict-container .predict-data p
+       {
+              font-weight: 350;
+              font-size: .9rem;
+              line-height: 2;
+       }
+       .predict-container .predict-data p span
+       {
+              font-weight: bolder;
+              background: rgba(0, 0, 0, 0.75);
+              border-radius: .1rem;
+              padding: .1rem;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+       }
+       .predict-container .disclaimer
+       {
+              background: transparent;
+              border: .1rem solid #fff;
+              color: #fff;
+              padding: .5rem 1rem;
+              border-radius: .5rem;
+       }
+       .predict-container .disclaimer p
+       {
+              font-weight: 350;
+              font-size: .9rem;
+              line-height: 2;
+       }
+
+       </style>
+</head>
+<body>
+    <!---   <h1>{{result}}</h1>-->
+<div class="predict-container">
+       <div class="predict-head">
+              <h2>prediction results</h2>
+              <p>Your personalized health insights are ready!</p>
+       </div>
+ <div class="predict-data">
+ <h3>risk prediction</h3>
+ <p>You are at moderate risk for Lifestyle Disease <span class="res">{{result}}</span> Taking proactive steps now can help you lead a healthier and happier life</p>
+ </div>
+ <div class="disclaimer">
+       <p><strong>Disclaimer:</strong> The information provided here is for educational and informational purposes only. It is not intended as a substitute for professional medical advice, diagnosis, or treatment. Please consult a qualified healthcare provider for personalized guidance.</p>
+     </div>
+</div>
+</body>
+</html>

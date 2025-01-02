@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*
+{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family: "Poppins", sans-serif;
+       font-weight: 600;
+       font-style: normal;
+
+}
+body
+{
+       display: flex;
+       min-height: 100vh;
+       align-items: center;
+       justify-content: center;
+}
+.wrapper
+{
+       background: transparent;
+       width: 750px;
+       border-radius: 1rem;
+       color: #fff;
+       padding: 1.5rem 3rem;
+       backdrop-filter: blur(40px);
+       border-radius: 1rem;
+}
+.wrapper h1
+{
+       text-align: center;
+       text-transform: uppercase;
+       font-size: 1.5rem;
+       font-weight: 400;
+
+}
+.input-box
+{
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+       align-items: center;
+       background: transparent;
+       gap: 2rem;
+       padding: .5rem;
+}
+.input-box .input-field
+{
+       width: 300px;
+       background: transparent;
+       margin: 1rem 0 1rem;
+       position: relative;
+       padding: .7rem 2rem;
+       border-radius: .7rem;
+       border: .2rem solid #fff;
+}
+.input-box .input-field input
+{
+       width: 100%;
+       background: transparent;
+       outline: none;
+       padding: .2rem .3rem;
+       border: none;
+       font-size: 1rem;
+       color: white;
+}
+.input-box .input-field input:valid::placeholder,
+.input-box .input-field input:focus::placeholder
+{
+       color: black;
+       transform: translateX(0px) translateY(-10px);
+       transition: .6s ease;
+       padding: .4rem;
+       font-size: .7rem;
+       text-transform: uppercase;
+}
+.input-box .input-field input::placeholder{
+       color: #eee;
+}
+.input-box .input-field i
+{
+       position: absolute;
+       left: 10px;
+       top: 50%;
+       transform: translateY(-50%);
+       color: black;
+       font-size: 1.2rem;
+}
+.wrapper .user-agree
+{
+       width: 100%;
+       background: transparent;
+       padding: 1rem;
+       margin: .5rem 0 .5rem;
+}
+.wrapper .user-agree label
+{
+       color: #fff;
+       font-weight: 450;
+       font-size: .8rem;
+       text-transform: capitalize;
+}
+.wrapper .user-agree label input
+{
+       accent-color: #fff;
+       margin-right: .3rem;
+       cursor: pointer;
+}
+.wrapper .btn
+{
+       width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       padding: .5rem;
+       background: transparent;
+       border: .2rem solid #fff;
+       border-radius: .5rem;
+       color: #fff;
+       font-size: .9rem;
+       font-weight: bold;
+       text-transform: capitalize;
+       cursor: pointer;
+       transition: .6s ease;
+}
+.wrapper .btn:hover
+{
+       background: #fff;
+       color: black;
+}
+.mssge
+{
+       background: transparent;
+       padding: 1rem;
+       margin: 0 2rem;
+}
+.mssge h3
+{
+       color: #fff;
+       font-family: 400;
+       text-align: center;
+}

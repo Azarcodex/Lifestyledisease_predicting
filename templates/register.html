@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>login page</title>
+       <link rel="stylesheet" href="{% static 'asset/register.css' %}">
+       <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+       <style>
+              body{
+                     background: url("{% static 'images/register-bg.jpeg' %}");
+                     background-position: center;
+                     background-size: cover;
+              }
+       </style>
+</head>
+<body>
+       <div class="wrapper">
+              <form action="{% url 'register' %}" method="post">
+                     {% csrf_token %}
+                     <h1>registration</h1>
+                     <div class="input-box">
+                            <div class="input-field">
+                                   <input type="text" name="first_name" placeholder="firstname" autocomplete="off" required>
+                                   <i class='bx bx-user'></i>
+                            </div>
+                            <div class="input-field">
+                                   <input type="text" name="last_name" placeholder="lastname" autocomplete="off" required>
+                                   <i class='bx bx-user'></i>
+                            </div>
+                     </div>
+                     <div class="input-box">
+                            <div class="input-field">
+                                   <input type="text" name="username" placeholder="username" autocomplete="off" required>
+                                   <i class='bx bxs-user-account'></i>
+                            </div>
+                            <div class="input-field">
+                                   <input type="email" name="email" placeholder="email" autocomplete="off" required>
+                                   <i class='bx bx-envelope'></i>
+                            </div>
+                     </div>
+                     <div class="input-box">
+                            <div class="input-field">
+                                   <input type="password" name="password1" placeholder="enter password" required>
+                                   <i class='bx bx-lock-alt' ></i>
+                            </div>
+                            <div class="input-field">
+                                   <input type="password" name="password2" placeholder="confirm password" required>
+                                   <i class='bx bxs-lock-alt'></i>
+                            </div>
+                     </div>
+                     <div class="user-agree">
+                     <label><input type="checkbox">i here by declare that the above information is true and correct</label>
+                     </div>
+                     <button type="submit" class="btn">submit</button>
+              </form>
+       </div>
+       <div class="mssge">
+              {% for message in messages %}
+              <h3>{{message}}</h3>
+              {% endfor %}
+       </div>
+</body>
+</html>

@@ -1,0 +1,262 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>healthcare</title>
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+       <link rel="stylesheet" href="{% static 'asset/style.css' %}">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+       <!--header begins-->
+       <header class="header">
+      <a href="#" class="logo">
+       <i class="fa-solid fa-heart-pulse"></i>
+       <h3><span class="o-txt">cura</span><span class="t-txt">sphere</span></h3>
+</a>
+      <nav class="navbar">
+       <a href="#" class="nav-links"><span class="spcl-nav">h</span>ome</a>
+       <a href="#services" class="nav-links"><span class="spcl-nav">s</span>ervices</a>
+       <a href="#about" class="nav-links"><span class="spcl-nav">a</span>bout</a>
+       <a href="#review" class="nav-links"><span class="spcl-nav">r</span>eviews</a>
+       <a href="#" class="nav-links"><span class="spcl-nav">o</span>ur team</a>
+       <a href="{% url 'register' %}" class="login">Register</a>
+      </nav>
+      <div class="fas fa-bars" id="menu-btn"></div>
+       </header>
+       <!--end of header-->
+       <!--Home page-->
+       <section class="home-section" id="home">
+              <div class="img-container">
+                     <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide"><img src="static/images/home1.jpg" alt=""></div>
+                              <div class="swiper-slide"><img src="static/images/home2.jpg" alt="" ></div>
+                              <div class="swiper-slide"><img src="static/images/home3.jpg" alt="" ></div>
+                              <div class="swiper-slide"><img src="static/images/home4.jpg" alt="" ></div>
+                              <div class="swiper-slide"><img src="static/images/home5.jpg" alt="" ></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                          </div>
+              </div>
+              <div class="home-contents">
+                   <h1 id="contx"></h1>
+              </div>
+       </section>
+       <!--home page ends-->
+       <!--icons-->
+       <section class="icon-section" id="services">
+              <div class="icon-container">
+                     <img src="static/images/icon1.png" alt="">
+                     <h3>individual data entry</h3>
+              </div>
+              <div class="icon-container">
+                     <img src="static/images/icon2.png" alt="">
+                     <h3>personalized recommendation</h3>
+              </div>
+              <div class="icon-container">
+                     <img src="static/images/icon3.png" alt="">
+                     <h3>disease predisposition analysis.</h3>
+              </div>
+              <div class="icon-container">
+                     <img src="static/images/x3.png" alt="">
+                     <h3>diet plan</h3>
+              </div>
+              <div class="icon-container">
+                     <img src="static/images/icon5.png" alt="">
+                     <h3>workout routines</h3>
+              </div>
+              <div class="icon-container">
+                     <img src="static/images/x6.png" alt="">
+                     <h3>mental training</h3>
+              </div>
+       </section>
+       <!--end of icons-->
+       <!--about section starts-->
+       <section class="about-section" id="about">
+              <div class="heading">
+                     <h2>Transform Your Health with Personalized Wellness Solutions<br>
+                     <span>here is the steps you want to follow</span></h2>
+              </div>
+              <div class="box-container-user_adv">
+                     <div class="adv_bx">
+                         <div class="img-adv">
+                            <img src="static/images/x1.png" alt="">
+                         </div>
+                         <h2>login required</h2>
+                         <p>Please log in to access this feature and enjoy a personalized experience</p>
+                     </div>
+                     <div class="adv_bx">
+                            <div class="img-adv">
+                               <img src="static/images/x2.png" alt="">
+                            </div>
+                            <h2>data retreiving</h2>
+                            <p>input youe data on the fields as required in systematic manner</p>
+                        </div>
+                        <div class="adv_bx">
+                            <div class="img-adv">
+                               <img src="static/images/x4.png" alt="">
+                            </div>
+                            <h2>recommendation</h2>
+                            <p>our generative AI will design the best personalized recommendations</p>
+                        </div>
+                        <div class="adv_bx">
+                            <div class="img-adv">
+                               <img src="static/images/x3.png" alt="">
+                            </div>
+                            <h2>customized diet plan</h2>
+                            <p>get your customized diet plan according your user-data</p>
+                        </div>
+                        <div class="adv_bx">
+                            <div class="img-adv">
+                               <img src="static/images/x5.png" alt="">
+                            </div>
+                            <h2>summary</h2>
+                            <p>generating the hightlighting symbtoms based on your data</p>
+                        </div>
+                        <div class="adv_bx">
+                            <div class="img-adv">
+                               <img src="static/images/x6.png" alt="">
+                            </div>
+                            <h2>100% assured</h2>
+                            <p>get the support you need to tackle lifestyle disease with a personalized workout plan</p>
+                        </div>
+              </div>
+       </section>
+       <!--main-section-->
+       <section class="main-content" id="main-content">
+              <div class="main-txt">
+                     <h3>lets transform your health journey</h3>
+                     <h5> Discover personalized health risk assessments, tailored wellness tips, and actionable lifestyle guidance. Take the first step towards better living with our expert-backed recommendations.</h5>
+              </div>
+              <div class="main-btn">
+                     <a href="{% url 'login' %}" class="journey-btn" id="main-data">start your journey</a>
+              </div>
+       </section>
+       <!--main section ends-->
+       <!--about ends-->
+       <!--company info-->
+       <section class="info-section" id="info">
+              <div class="heading-info">
+                     <h3>why choose us?</h3>
+              </div>
+              <div class="info-container">
+                     <div class="info-img_bx">
+                        <dotlottie-player
+  src="https://lottie.host/a0992cbb-f6bc-4780-9bc2-ba60d07d7527/jyrinakkbw.lottie"
+  background="transparent"
+  speed="1"
+  style="width: 400px; height: 700px"
+  loop
+  autoplay
+></dotlottie-player>
+                     </div>
+                     <div class="info_txt_data">
+                         <p><span>curosphere</span> is a groundbreaking lifestyle app designed to revolutionize how you manage your health. By leveraging cutting-edge technology and a user-focused approach, the app provides actionable insights and personalized strategies to help you prevent and manage lifestyle diseases.</p>
+                         <h3>why choose our app?</h3>
+                         <p>
+  Our app is more than just a health tracker—it's your personal health companion. Using advanced data analytics and machine learning, we identify your unique health risk factors and deliver recommendations tailored to your specific needs. Whether you're aiming to improve fitness, adopt a healthier diet, or reduce stress,<span>curosphere</span>is here to guide you every step of the way.                          
+                         </p>
+                     </div>
+              </div>
+       </section>
+       <!--end of company info-->
+       <!--our review section-->
+       <h1 class="rev-head">voice of trust</h1>
+        <section class="review-section" id="review">
+              <div class="anim-rev">
+              <div class="swiper mySwiper">
+                     <div class="swiper-wrapper">
+                            {% for rev in Revs %}
+                       <div class="swiper-slide">
+                            <div class="rev_bx">
+                            <div class="img-rev_box">
+                            <img src="{{rev.img.url}}" alt="">
+                            </div>
+                            <h3>{{rev.name}}</h3>
+                            <p><q>{{rev.desc}}</q></p>
+                            <div class="stars">
+                                   <i class="fa-solid fa-star"></i>
+                                   <i class="fa-solid fa-star"></i>
+                                   <i class="fa-solid fa-star"></i>
+                                   <i class="fa-solid fa-star"></i>
+                                   <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            </div>
+                       </div>
+                       {% endfor %}
+                     </div>
+                     <div class="swiper-button-next"></div>
+                     <div class="swiper-button-prev"></div>
+                     <div class="swiper-pagination"></div>
+                   </div>
+              </div>
+                   <div class="img-rev-contx">
+                     <dotlottie-player
+  src="https://lottie.host/deb07c1f-5c93-4329-8c63-b28aefa776a9/5P52Uy7Kvu.lottie"
+  background="transparent"
+  speed="1"
+  style="width: 600px; height: 450px"
+  loop
+  autoplay
+></dotlottie-player>
+              </div>
+        </section>
+       <!--end of review-->
+       <!--footer-->
+       <footer class="footer">
+                     <div class="quick-links">
+                            <h3>quick links</h3>
+                            <a href="#home">home</a>
+                           <a href="#services">services</a>
+                            <a href="#about">about</a>
+                             <a href="#review">review</a>
+                              <a href="#team">team</a>
+                     </div>
+                     <div class="social-links">
+                            <h3>connect us on social media</h3>
+                            <i class="fa-brands fa-instagram" style="color: #DD2A7B;"></i>
+                            <i class="fa-brands fa-facebook" style="color: #1877F2;"></i>
+                            <i class="fa-brands fa-twitter" style="color: #1DA1F2;"></i>
+                            <i class="fa-brands fa-youtube" style="color: #FF0000;"></i>
+                            <i class="fa-brands fa-whatsapp" style="color: #25D366;"></i>
+              </div>
+              <div class="company-details">
+                     <h2><span>cura</span>sphere</h2>
+                     <div class="address">
+                     <i class="fa-solid fa-house"></i>
+                     <p>nam college kallikandy</p>
+                     </div>
+                     <div class="address">
+                            <i class="fa-solid fa-message"></i>
+                            <p>curasphereX@gmail.com</p>
+                     </div>
+                            <div class="address">
+                                   <i class="fa-solid fa-phone"></i>
+                                   <p>+91 9745211554</p>
+                             </div>
+                     </div>
+       </footer>
+       <div class="end">
+              &copy; <span id="currentYear">2024</span> curaspere. All rights reserved.
+       </div>
+       <!--end of footer-->
+       <script src="{% static '/asset/menu.js' %}"></script>
+       <script src="{% static '/asset/typing.js' %}"></script>
+       <script src="{% static '/asset/animscrol.js' %}"></script>
+       <script src="{% static '/asset/swipe.js' %}"></script>
+       <script src="https://unpkg.com/scrollreveal"></script>
+       <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+       <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+       <script src="{% static '/asset/colorchange.js' %}"></script>
+       <script
+  src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+  type="module"
+></script>
+</body>
+</html>
