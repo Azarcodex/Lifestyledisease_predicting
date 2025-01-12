@@ -72,6 +72,16 @@ gender_map = {'male': 1, 'female': 0}
 bp_map = {'low': 0, 'normal': 1, 'high': 2}
 cl_map = {'low': 0, 'normal': 1, 'high': 2}
 
+def is_normal(x1,x2,x3,x4,x7,x8):
+       return(
+              x1==0 and
+              x2==0 and
+              x3==0 and
+              x4==0 and
+              x7==1 and
+              x8==1
+       )
+
 def prediction(request):
     if request.method == 'POST':
         try:
@@ -86,16 +96,20 @@ def prediction(request):
             val8 = float(cl_map.get(request.POST.get('Cholesterol Level').lower(), 0))
             
             # Create input data frame
-            input_data = pd.DataFrame([[val1, val2, val3, val4, val5, val6, val7, val8]],
+            if is_normal(val1,val2,val3,val4,val7,val8):
+              message="Hey,You are completely normal,no disease detected."
+            else:
+              input_data = pd.DataFrame([[val1, val2, val3, val4, val5, val6, val7, val8]],
                                       columns=['Fever', 'Cough', 'Fatigue', 'Difficulty Breathing', 
                                                'Age', 'Gender', 'Blood Pressure', 'Cholesterol Level'])
             
             # Predict disease
-            prediction = model.predict(input_data)[0]
-            result = le_disease.inverse_transform([prediction])[0]
-        
+              prediction = model.predict(input_data)[0]
+              result = le_disease.inverse_transform([prediction])[0]
+              message=f"""You are at moderate risk for Lifestyle Disease {result} 
+              Taking proactive steps now can help you lead a healthier and happier life"""
 
-            return render(request, 'prediction.html', {"result": result})
+            return render(request, 'prediction.html', {"result": message})
         except Exception as e:
             return render(request, 'prediction.html', {"error": str(e)})
     else:
